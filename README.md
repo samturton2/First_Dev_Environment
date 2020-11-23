@@ -4,8 +4,7 @@ This repo is our first Virtual Environment to create a Dev Environment
 
 ## Virtual Box
 What is it?
-
-
+![](img/Virtual_box.png)
 
 ## Vagrant
 What is it?
@@ -29,6 +28,10 @@ Ubuntu headless - is basically a terminal, no GUI. (this is the one we will use)
   - creates virtual environment
 - `vagrant destroy`
   - destroys virtual environment
+- `vagrant reload`
+  - reloads environment for changes in vagrant file
+
+
 ##### Task 1
 - Vagrant up with ubuntu/xenial64
 - vagrant destroy
@@ -58,3 +61,34 @@ end
 - linux commands to make readme `nano README.md`
 - `exit`
 ![](img/exit_virtual_machine.png)
+
+
+### Next chapter
+- add to vagrant file ``` config.vm.network "private_network", ip: "192.168.10.2" ```
+- enter virt machine
+- run some of these commands to install nginx
+```
+sudo apt update
+sudo apt install nginx
+```
+
+- exit vagrant
+
+- Now to get a normal link instead of ip address
+- install plugin
+```
+vagrant plugin install vagrant-hostsupdater
+```
+- instuctions on this github link
+https://github.com/agiledivider/vagrant-hostsupdater
+
+- now can choose a hostname
+```
+config.vm.network "private_network", ip: "192.168.10.2"
+config.vm.hostname = "www.samtesting.local"
+```
+![](img/Welcome_to_nginx.png)
+
+- (quick not that http:// should be used as https:// stands for security which our local host wouldnt have set up)
+
+
