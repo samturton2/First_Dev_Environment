@@ -3,12 +3,11 @@
 This repo is our first Virtual Environment to create a Dev Environment
 
 ## Virtual Box
-What is it?
+
+
 ![](img/Virtual_box.png)
 
 ## Vagrant
-What is it?
-
 Vagrant boxes - Pre leaded vagrant files that create virtual machines. Usually just an OS.
 
 Ubunto is an open source OS
@@ -17,6 +16,13 @@ Ubuntu headless - is basically a terminal, no GUI. (this is the one we will use)
   - Faster
   - More secure
   - Lighter
+
+## Environments
+Virtual environments are there to provide a simple solution to a whole host of problems. It is a tool for **dependency management** and **project isolation**. They allow site packages to be installed locally in an isolated directory for a particular project as opposed to being installed globally.
+- Resolve dependancy issues
+- Make your project self contained and reproducable
+- install packages on a host on which you do not have admin priviledges
+- Keep your global site packages directory tidy
 
 ### Main commands
 
@@ -57,9 +63,11 @@ end
 ```
 - `vagrant up`
 - `vagrant ssh`
+
 ![](img/vagrant_ssh.png)
 - linux commands to make readme `nano README.md`
 - `exit`
+
 ![](img/exit_virtual_machine.png)
 
 
@@ -90,5 +98,4 @@ config.vm.hostname = "www.samtesting.local"
 ![](img/Welcome_to_nginx.png)
 
 - (quick not that http:// should be used as https:// stands for security which our local host wouldnt have set up)
-
 
